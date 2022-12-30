@@ -1,10 +1,10 @@
-import { Header } from "./components/Header";
-import { Menu } from "./components/Menu";
-import { Timeline } from "./components/Timeline";
+import { CssReset } from "../components/css/CssReset";
+import { Header } from "../components/Header";
+import { Menu } from "../components/Menu";
+import { Timeline } from "../components/Timeline";
 
 import config from "../config.json";
 import styled from "styled-components";
-import { CssReset } from "./components/css/CssReset";
 
 
 
