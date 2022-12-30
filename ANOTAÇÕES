@@ -1,0 +1,26 @@
+---------------- starting ----------------
+
+npm install next react react-dom
+
+---------------- Running ----------------
+-- All scripts are located at package.json
+npm run dev
+
+
+
+
+---------------- styled-components ----------------
+https://github.com/vercel/next.js/tree/canary/examples/with-styled-components
+
+npm install --save styled-components
+
+copy and paste the file next.config.js to the root of the project
+
+Then import styled
+
+---------------- Publishing in Vercel ----------------
+git init
+npx gitignore node          // Ignora Arquivos temporários desnecessários a pblicação
+git add .
+git commit -m "first commit"
+
