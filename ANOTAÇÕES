@@ -1,3 +1,4 @@
+AULA 1 ------------------------------------------------------------------------------------
 ---------------- starting ----------------
 
 npm install next react react-dom
@@ -25,5 +26,17 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/brunosiq99/aluratube.git
-git push -u origin main
 
+
+
+AULA 2 ------------------------------------------------------------------------------------------------------------
+links inmportantes
+https://techguide.sh/
+https://babeljs.io/
+
+Conceitos - SPA
+*  Um aplicativo de página única (SPA - single-page application) é uma aplicação web ou site que interage com o usuário reescrevendo dinamicamente a página web atual com novos dados do servidor web, em vez do método padrão de um navegador que carrega novas páginas inteiras. O objetivo são transições mais rápidas, que tornam o site mais parecido com uma aplicação nativa.
+  - Entender o que é uma SPA
+  - Estabelecer rotas para outras páginas
+  - Conhecer frameworks SPA
+  - Comunicação com APIs

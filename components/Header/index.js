@@ -3,7 +3,6 @@ const StyledHeader = styled.div`
     .user-info{
         align-items: center;
         display: flex;
-        margin-top: 5rem;
         padding: 1rem 2rem;
         width: 100%;
         img{
@@ -14,12 +13,20 @@ const StyledHeader = styled.div`
         div{
             margin-left: 0.5rem;
         }
-    }
-    
+    } 
+`;
+const StyledBanner = styled.div`
+    background-image: url(${({bg}) => bg});
+    background-position: center;
+    background-size: cover;
+    height: 14.375rem;
 `;
 export const Header = ({userInfo}) => {
     return (
         <StyledHeader>
+            <StyledBanner
+                bg={userInfo.bg}
+            />
             <section className="user-info">
                 <img src={`https://github.com/${userInfo.github}.png`}/>
                 <div>
@@ -30,3 +37,5 @@ export const Header = ({userInfo}) => {
         </StyledHeader>
     )
 }
+
+

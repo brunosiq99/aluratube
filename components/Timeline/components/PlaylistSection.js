@@ -40,19 +40,26 @@ const StyledPlaylistSection = styled.section`
     }
 `
 
-export const PlaylistSection = ({videos, playlistName}) => {
+export const PlaylistSection = ({videos, playlistName, filterValue}) => {
     return(
         <StyledPlaylistSection>
             <h2>{playlistName}</h2>
             <div>
-                {videos.map((video) => {
-                    return(
-                        <VideoCard
-                            key={video.title}
-                            video={video}
-                        />
-                    )
-                })}
+                {videos
+                    .filter((video)=>{
+                        const titleNormalized = video.title.toLowerCase();
+                        const filterNormalized = filterValue.toLowerCase();
+                        return titleNormalized.includes(filterNormalized) 
+                    })
+                    .map((video) => {
+                        return(
+                            <VideoCard
+                                key={video.url}
+                                video={video}
+                            />
+                        )
+                    })
+                }
             </div>    
         </StyledPlaylistSection>
     )    
