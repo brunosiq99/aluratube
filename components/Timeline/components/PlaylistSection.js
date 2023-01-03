@@ -40,9 +40,9 @@ const StyledPlaylistSection = styled.section`
     }
 `
 
-export const PlaylistSection = ({videos, playlistName, filterValue}) => {
+export const PlaylistSection = ({videos, playlistName, filterValue, theme}) => {
     return(
-        <StyledPlaylistSection>
+        <StyledPlaylistSection theme={theme}>
             <h2>{playlistName}</h2>
             <div>
                 {videos
@@ -55,6 +55,7 @@ export const PlaylistSection = ({videos, playlistName, filterValue}) => {
                         return(
                             <VideoCard
                                 key={video.url}
+                                theme={theme}
                                 video={video}
                             />
                         )

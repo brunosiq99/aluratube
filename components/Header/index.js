@@ -2,6 +2,8 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
     .user-info{
         align-items: center;
+        background-color: ${({ theme }) => theme.backgroundBase};
+        color: ${({theme}) => theme.textColorBase};
         display: flex;
         padding: 1rem 2rem;
         width: 100%;
@@ -11,7 +13,7 @@ const StyledHeader = styled.div`
             width: 5rem;
         }
         div{
-            margin-left: 0.5rem;
+            margin-left: 0.5rem;  
         }
     } 
 `;
@@ -21,10 +23,13 @@ const StyledBanner = styled.div`
     background-size: cover;
     height: 14.375rem;
 `;
-export const Header = ({userInfo}) => {
+export const Header = ({userInfo, theme}) => {
     return (
-        <StyledHeader>
+        <StyledHeader
+            theme={theme}
+        >
             <StyledBanner
+                theme={theme}
                 bg={userInfo.bg}
             />
             <section className="user-info">

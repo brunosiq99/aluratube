@@ -1,11 +1,21 @@
-export const VideoCard = ({video}) => {
+import styled from "styled-components"
+
+const StyledVideoCard = styled.a`
+    span{
+        color: ${({theme})=> theme.textColorBase};
+    }  
+`;
+export const VideoCard = ({video,theme}) => {
     return(
-        <a href={video.url}>
+        <StyledVideoCard
+            theme={theme} 
+            href={video.url}
+        >
             <img src={video.thumb}/>
             <span>
                 {video.title}
             </span>
-        </a>
+        </StyledVideoCard>
     ) 
 }
 

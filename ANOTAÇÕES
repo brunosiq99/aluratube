@@ -40,3 +40,10 @@ Conceitos - SPA
   - Estabelecer rotas para outras páginas
   - Conhecer frameworks SPA
   - Comunicação com APIs
+
+
+
+AULA 3 ------------------------------------------------------------------------------------------------------
+  - Com o que aprendemos, é possivel implementar o darkMode, porém é trabalhoso ficar passando a prop theme para todos componentes.
+  - O next permite criar um arquivo com as pageProps comuns
+https://nextjs.org/docs/advanced-features/custom-app
