@@ -1,16 +1,7 @@
-/*export const DarkModeSwitch = ({changeTheme}) => {
-    return(
-        <form onChange={(e) => changeTheme(e.target.value)}>
-            <input type="radio" name="mode" value="dark"/>
-            <input defaultChecked type="radio" name="mode" value="light"/>
-        </form>
-    )
-}
-*/
+
 import React from "react";
 import styled from "styled-components";
-import { ColorModeContext } from "../../../pages/ColorMode";
-//import { ColorModeContext } from "./ColorMode";
+import { ColorModeContext } from "../../ColorMode";
 
 const StyledSwitch = styled.div`
   background-color: #333333;
