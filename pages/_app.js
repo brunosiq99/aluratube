@@ -1,8 +1,7 @@
 import { React } from "react";
-import { useState } from "react";
 import { useContext } from "react";
 
-import { ColorModeContext, ColorModeProvider } from "./ColorMode";
+import { ColorModeContext, ColorModeProvider } from "../components/ColorMode";
 import { ThemeProvider } from "styled-components";
 
 import config from "../config.json";
