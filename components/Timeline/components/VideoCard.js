@@ -5,10 +5,9 @@ const StyledVideoCard = styled.a`
         color: ${({theme})=> theme.textColorBase};
     }  
 `;
-export const VideoCard = ({video,theme}) => {
+export const VideoCard = ({video}) => {
     return(
         <StyledVideoCard
-            theme={theme} 
             href={video.url}
         >
             <img src={video.thumb}/>

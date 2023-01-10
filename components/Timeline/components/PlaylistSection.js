@@ -34,15 +34,14 @@ const StyledPlaylistSection = styled.section`
                 padding-top: 8px;
                 display: block;
                 padding-right: 24px;
-                color: ${({ theme }) => theme.textColorBase || "#222222"};
             }
         }
     }
 `
 
-export const PlaylistSection = ({videos, playlistName, filterValue, theme}) => {
+export const PlaylistSection = ({videos, playlistName, filterValue}) => {
     return(
-        <StyledPlaylistSection theme={theme}>
+        <StyledPlaylistSection>
             <h2>{playlistName}</h2>
             <div>
                 {videos
@@ -55,7 +54,6 @@ export const PlaylistSection = ({videos, playlistName, filterValue, theme}) => {
                         return(
                             <VideoCard
                                 key={video.url}
-                                theme={theme}
                                 video={video}
                             />
                         )

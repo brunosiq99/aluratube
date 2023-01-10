@@ -29,19 +29,15 @@ const StyledMenu = styled.header`
 `;
 
 //
-export const Menu = ({filterValue, setFilterValue, theme, changeTheme}) => {
+export const Menu = ({filterValue, setFilterValue}) => {
     return (
-        <StyledMenu
-          theme={theme}
-        >
+        <StyledMenu>
             <Logo />
             <Search 
               filterValue={filterValue}
               setFilterValue={setFilterValue}
             />
-            <DarkModeSwitch 
-              changeTheme={changeTheme}
-            />
+            <DarkModeSwitch/>
         </StyledMenu>     
     );
 }

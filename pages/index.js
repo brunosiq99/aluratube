@@ -1,50 +1,48 @@
-import { CssReset } from "../components/css/CssReset";
+//import components
 import { Header } from "../components/Header";
 import { Menu } from "../components/Menu";
 import { Timeline } from "../components/Timeline";
 
-import config from "../config.json";
+//import configurations and libraries
+
 import React from "react";
 import { useState } from "react";
+import styled from "styled-components";
+import config from "../config.json"
 
-export default function HomePage(){
-    const homePageStyles = {
-        display: "flex",
-        flexDirection: "column",
-        flex: 1
-    }
 
+const StyledHomePage = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+`;
+
+export default function HomePage() {
     const [filterValue, setFilterValue] = useState('');
-    const [theme, setTheme] = useState(config.colorStyles.light);
-    const changeTheme = (themeValue) => {
-        themeValue === `light` ? setTheme(config.colorStyles.light) : setTheme(config.colorStyles.dark)
-    }
-    
-    return (
-        <>
-            <CssReset/>
-            <div style={homePageStyles}>
-                <Menu
-                    theme={theme}
-                    changeTheme={changeTheme}
-                    filterValue={filterValue}
-                    setFilterValue={setFilterValue}
-                />
-                <Header
-                    key="header"
-                    userInfo={config.userinfo}
-                    theme={theme}
+    return(
+        <StyledHomePage>
+            <Menu
+                filterValue={filterValue}
+                setFilterValue={setFilterValue}
+            />
+            <Header
+                key="header"
+                userInfo={config.userinfo}
 
-                />
-                <Timeline
-                    key="timeline"
-                    filterValue={filterValue}
-                    playlists={config.playlists}
-                    theme={theme}
-                />
-            </div>
-        </>
-        
+            />
+            <Timeline
+                key="timeline"
+                filterValue={filterValue}
+                playlists={config.playlists}
+            />
+        </StyledHomePage>
     )
 }
-  
+
+    
+ /*       <ThemeProvider theme={theme}>
+            <CssReset/>
+            
+        <ThemeProvider/>    
+    
+*/

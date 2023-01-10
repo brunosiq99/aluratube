@@ -1,9 +1,8 @@
 import styled from "styled-components";
 const StyledHeader = styled.div`
+    background-color: ${({theme}) => theme.backgroundLevel1};
     .user-info{
         align-items: center;
-        background-color: ${({ theme }) => theme.backgroundBase};
-        color: ${({theme}) => theme.textColorBase};
         display: flex;
         padding: 1rem 2rem;
         width: 100%;
@@ -23,13 +22,10 @@ const StyledBanner = styled.div`
     background-size: cover;
     height: 14.375rem;
 `;
-export const Header = ({userInfo, theme}) => {
+export const Header = ({userInfo}) => {
     return (
-        <StyledHeader
-            theme={theme}
-        >
+        <StyledHeader>
             <StyledBanner
-                theme={theme}
                 bg={userInfo.bg}
             />
             <section className="user-info">
