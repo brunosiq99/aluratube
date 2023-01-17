@@ -5,7 +5,8 @@ import { ColorModeContext, ColorModeProvider } from "../components/ColorMode.js"
 import { ThemeProvider } from "styled-components";
 
 import config from "../config.json";
-import { CssReset } from "../components/css/CssReset";
+import { CssReset } from "../components/CssReset";
+import { RegisterVideo } from "../components/RegisterVideo/index.js";
 
 const ProviderWrapper = ({children}) => {
     return(
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
         <ThemeProvider theme={config.colorStyles[context.mode]}>
             <CssReset/>
             <Component {...pageProps} />
+            <RegisterVideo/>
         </ThemeProvider>   
     )
 }
