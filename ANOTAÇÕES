@@ -26,6 +26,7 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/brunosiq99/aluratube.git
+git push -u origin main
 
 
 
@@ -49,3 +50,6 @@ AULA 3 -------------------------------------------------------------------------
 https://nextjs.org/docs/advanced-features/custom-app
   - THemeProvider 
 https://styled-components.com/docs/advanced
+
+AULA 4 -----------------------------------------------------------------------------------------------------
+  - Desafio: capturar dinamicamente, através da url, a thumb do vídeo e exibir uma prévia da imagem no card de registro.
